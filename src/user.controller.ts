@@ -27,7 +27,7 @@ export const createUser = (req: Request, res: Response) => {
 
 // DELETE - supprimer un utilisateur
 export const deleteUser = (req: Request, res: Response) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(req.params.id as string);
 
   users = users.filter((user) => user.id !== id);
 
